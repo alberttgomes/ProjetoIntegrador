@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel= "stylesheet" type ="text/css" href="CSS/normalize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:wght@300&family=Yellowtail&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type ="text/css" href="CSS/style.css">
+    <link rel ="icon" href = "img/icon">
+    <title>Tapioca da Ceça</title>
+    
+</head>
+     
+      
+  
+<body>
+   
+    
+   <nav id = "Topo" class="nav flex-row" class = "col-3">
+
+        <div class="toggle-collapse">
+        <div class="toggle-icons text-black">
+            <!--<span><i class="fas fa-bars"></i></span>-->
+            <span class="icon"></span>
+        </div>
+        </div>
+        
+        <div>
+          <a class="logo">
+            <img src = "./logo tapioca da ceça final(1).png" alt = "logo" width = "247px" height ="221px">
+        </a>
+        </div>
+       
+       <div>
+         <ul class="nav-items flex-row">
+            <li class="nav-link">
+                <a href="Home" class="text-black">Home</a>
+            </li>
+            <li class="nav-link">
+                <a href="#Cardapio" class="text-black">Cardápio</a>
+            </li>
+            <li class="nav-link">
+                <a href="#Contato" class="text-black">Contato</a>
+            </li>
+            <li class="nav-link">
+                <a href="#Sobre" class="text-black">Sobre</a>
+            </li>
+            
+         </ul>
+       </div>
+       
+        <div class="social">
+          <a id ="Wpp" href="https://api.whatsapp.com/send?phone=" onclick = "Wpp()" target="_blank"><img src = "LOGOS/WPPOFICIAL.svg" alt = "WhatsApp" width="50px" height="50px"> </a>
+        </div>
+  </nav>
+  <div id="horário" >
+    <p>Horário de funcionamento: Das 6 às 19 horas. Segunda à Sexta.</p>
+  </div>
+ 
+
+  <div class="slideshow-container">
+  
+  <div class="mySlides fade">
+    <img src="IMAGENS/WhatsApp Image 2020-12-07 at 15.03.18.jpeg" style="width:100%">
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="IMAGENS/tapioca.png" style="width:100%">
+  </div>
+  
+  <div class="mySlides fade">
+    <img src = "IMAGENS/WhatsApp Image 2020-12-14 at 17.24.34.jpeg" style="width:100%">
+  </div>
+  
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+  </div>     
+         <br><br><br><br><br><br><br>
+
+       <div id = "cd" style="text-align: center;">
+        <a  id="seta" href="#Topo">&Uarr;</a> 
+        <h1>Cardápio</h1>
+       </div>
+       
+       <div id="Cardapio">
+
+        <div id="item">
+            <h2>Tapiocas</h2>
+            <p><img src="./tapioca figura.png" alt="Figura de tapioca" width="90vh" height="60vh"></p>
+            <p>Escolha sua tapioca</p> 
+            <p>A partir de:</p>             
+            <h3>R$ 5,99 <button  class="openBtn" onclick="openSearch()">+</button></a></h3>
+        </div>
+      
+        <div id="myOverlay" class="overlay">
+          <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+    
+                <h2 class = "center" style = "text-align: center; font-family: 'Nunito',Arial, sans-serif;"><em>Monte Sua Tapioca</em></h2 >
+             <br>
+              <form class ="escolha">
+              <label id = "Nome" for="item1">Nome:</label>
+              <input type="text" id="item1" name="item1" placeholder="Digite seu nome completo">
+              <label id = "Bloco" for="item2">Bloco:</label>
+              <input type="text" id="item2" name="item2" placeholder="Digite seu bloco">
+              <label id = "Formap" for="item3">Forma de Pagamento:</label>
+              <input type="text" id="item3" name="item3" placeholder="Forma de pagamento">
+              <br><br>
+              <h3 align = "center">A partir de 3 sabores acréscimo de R$1,00</h3>
+              <br>
+              <div class = "tapiocadiv">
+              <input type="checkbox" class="sabor">
+              <label for= "Calabresa">Calabresa</label><br>
+              <input type="checkbox" class="sabor">
+              <label for= "Charque">Charque</label><br>
+              <input type="checkbox" class="sabor">
+              <label for="Chocolate">Chocolate</label><br>
+              <input type="checkbox" class="sabor">
+              <label for="Coco">Coco</label><br>
+              <input type="checkbox" class="sabor">
+              <label for ="Frango">Frango</label><br>
+              <input type="checkbox" class="sabor">
+              <label for = "LeiteCondensado">Leite Condensado</label><br>
+              <input type="checkbox" class="sabor">
+              <label for = "Queijo">Queijo</label><br>
+              <input type="checkbox" class="sabor">
+              <label for ="Requeijao">Requeijão</label><br>
+              <input type="checkbox" class="sabor">
+              <label for="RomeuJulieta">Romeu e Julieta</label><br>  
+              </div>           
+            <br>
+            <div align = "center">
+            <button id ="limpar1" type ="reset">Limpar</button><button id= "ad" type ="submit" onclick = "enviarUm()">Comprar</button>  
+            </div>    
+            <p id = "send"><a id = "wpp" href="" target="_blank">Finalizar</a></p>       
+            </form>
+        </div>
+             
+     <div id="item">
+        <h2>Bolo e Torta</h2>
+        <p><img src="./Bolo figura.png" alt="Figura do bolo" width="90vh" height="60vh" ></p>
+        <p>Escolha seu recheio</p>
+        <p>A partir de:</p>
+        <h3>R$ 2,00 <button  class="openBtn1" onclick="openSearch1()">+</button></h3>
+     </div>
+        <div id="myOverlay1" class="overlay1">
+          <span class="closebtn1" onclick="closeSearch1()" title="Close Overlay">×</span>
+           
+            <ol>
+                <h2 class = "center" style = "text-align: center; font-family: 'Nunito',Arial, sans-serif;"><em>Selecione Sua Fatia de Bolo/Torta</em></h2 >
+             <br>
+            <form class ="escolha">
+              <label for="item1">Nome:</label>
+              <input type="text" id="item1" name="item1" placeholder="Digite seu nome completo">
+              <label for="item2">Bloco:</label>
+              <input type="text" id="item2" name="item2" placeholder="Digite seu bloco">
+              <label for="item3">Forma de Pagamento:</label>
+              <input type="text" id="item3" name="item3" placeholder="Forma de pagamento">
+              <br><br>
+              <h3 align = "center">Sabores dos Bolos:</h3>
+              <h4 align = "center">Fatia por R$ 2,00</h4>
+              <br>
+            <div class = "bolodiv">
+              <input type="checkbox" class="sabor">
+              <label for= "Laranja">Laranja</label><br>
+              <input type="checkbox" class="sabor">
+              <label for= "Trigo">Trigo</label><br>
+              <br>
+            </div>           
+            <br>
+            <h3 align = "center">Sabor da Torta:</h3>
+            <h4 align = "center">Fatia por R$ 3,00</h4>
+              <br><br>
+            <div class = "bolodiv"> 
+              <input type="checkbox" class="sabor">
+              <label for="Chocolate">Chocolate</label><br>
+              <input type="checkbox" class="sabor">
+              <label for="BolodeRolo">Bolo de rolo</label><br>
+              <input type="checkbox" class="sabor">
+              <label for ="boloint">Bolo de rolo inteiro por R$ 12,00</label><br>
+            </div>
+            <br>
+            <div align = "center">
+              <button id= "limpar2" type ="reset">Limpar</button> <button id = "ad2" type ="submit" onclick = "enviarDois()">Comprar</button>  
+            </div>           
+           
+          </form>
+        </div>
+     
+
+    <div id="item">
+        <h2>Sanduíche Natural</h2>
+        <p><img src="./Sanduíche Natural.png" alt="sanduíche" width="90vh" height="60vh" ></p>
+        <p>Escolha seu Sanduíche</p>
+        <p>Preço fixo de:</p>
+        <h3>R$ 5,00  <button  class="openBtn2" onclick="openSearch2()">+</button></h3>
+    </div>
+        <div id="myOverlay2" class="overlay2">
+          <span class="closebtn2" onclick="closeSearch2()" title="Close Overlay">×</span>
+              <ol>
+                <h2 class = "center" style = "text-align: center; font-family: 'Nunito',Arial, sans-serif;"><em>Selecione seu Sanduíche Natural</em></h2 >
+             <br>
+              <form class ="escolha">
+              <label for ="item1">Nome:</label>
+              <input type ="text" id="item1" name="item1" placeholder="Digite seu nome completo">
+              <label for ="item2">Bloco:</label>
+              <input type ="text" id="item2" name="item2" placeholder="Digite seu bloco">
+              <label for ="item3">Pagamento:</label>
+              <input type ="text" id="item3" name="item3" placeholder="Forma de pagamento">
+              <br><br>
+              <h3 align = "center">Opções:</h3>
+              <br><br>
+              
+          <div class = "sanduichediv" align = "center">
+              <input type ="radio" class="sabor" name = "sanduiche">
+              <label for = "FrangoRequeijao">Frango e Requeijão</label><br>
+              <input type ="radio" class="sabor" name = "sanduiche">
+              <label for = "Rqueijao">Requeijão e Ricota</label>
+              <br><br>
+              <div>
+              <button id ="limpar3" type ="reset">Limpar</button> <button id = "ad3" type ="submit" onclick = "enviarTres()">Comprar</button>  
+              </div>
+            </div>           
+            </form>
+           </div>
+      
+  
+  
+      
+
+    <div id="item">
+        <h2>Café</h2>
+        <p><img src="./café figura.png" alt="Figura do café" width="90vh" height="60vh" ></p>
+        <p>Escolha seu café</p>
+        <p>A partir de:</p>
+        <h3>R$ 0,50 <button  class="openBtn3" onclick="openSearch3()">+</button></h3>
+    </div>
+       
+        <div id="myOverlay3" class="overlay3">
+         
+          <span class="closebtn3" onclick="closeSearch3()" title="Close Overlay">×</span>
+        <ol>
+          <h2 class = "center" style = "text-align: center; font-family: 'Nunito',Arial, sans-serif;"><em>Selecione seu Café</em></h2 >
+       <br>
+        <form class ="escolha">
+        <label for="item1">Nome:</label>
+        <input type="text" id="item1" name="item1" placeholder="Digite seu nome completo">
+        <label for="item2">Bloco:</label>
+        <input type="text" id="item2" name="item2" placeholder="Digite seu bloco">
+        <label for="item3">Forma de Pagamento:</label>
+        <input type="text" id="item3" name="item3" placeholder="Forma de pagamento">
+        <br><br>
+        <h3 align = "center">Opções:</h3>
+        <br><br>
+        
+        <div class = "cafediv">
+        <input type="radio" class="sabor" name = "opcaoc">
+        <label for= "50">50ml por R$ 0,50</label><br>
+        <input type="radio" class="sabor" name = "opcaoc">
+        <label for= "1real">110ml por R$ 1,00</label><br>
+        <input type="radio" class="sabor" name = "opcaoc">
+        <label for= "1real">180ml por R$ 2,00</label><br>
+        <input type="radio" class="sabor" name = "opcaol">
+        <label for= "1,50">50ml por R$ 1,50 Com Leite</label><br>
+        <input type="radio" class="sabor" name = "opcaol">
+        <label for= "3real">110ml por R$ 2,00 Com Leite</label><br>
+        <input type="radio" class="sabor" name = "opcaol">
+        <label for= "3real">180ml por R$ 3,00 Com leite </label>
+        <br><br>
+        <div align = "center">
+        <button id = "limpar4" type ="reset">Limpar</button><button id = "enviar4" type ="submit">Comprar</button>  
+        </div>
+      </div>           
+      </form>
+        
+     </div>
+   </div>
+       
+      
+ </div>
+      <div class = espaco>
+        <p></p>
+        <br><br>
+      </div>
+      
+      <div id = "titulo"><a  id="seta" href="#Topo" style = "color: #eaeaea;">&Uarr;</a> <h3>Sobre Nós</h3></div>       
+       
+      <div id = "Sobre">
+        <br><br>
+        <br> <p>Somos o primeiro ponto comercial da Rua do Lazer, 
+        <br>tudo começou há cerca de 45 anos atrás com Dona Carminha,
+        <br>a mãe de Ceça a qual dá nome ao comércio. Aproximadamente
+        <br> há três  anos nos foi dado a missão de dar continuidade a empresa que
+        <br>hoje conta com Ceça e Cleiton. Buscamos sempre prezar pelo bem estar
+        <br> dos nossos clientes e parceiros, trabalhando sempre a excelência em 
+        <br>atendimento e qualidade dos nossos produtos e serviços, para que assim
+        <br>venhamos a alcançar a satisfação dos clientes!</p> 
+        <br><br>
+         
+      </div> 
+            
+        <footer class = "rodape">
+          <div class = "itemsrodape">
+            <h5>Localização</h5>
+            <p>Endereço:</p>
+           <p>Rua Bernardo Guimarães</p>
+           <p>CEP: 500-50440</p>
+          </div>
+          
+          <div class = "itemsrodape">
+            <a href ="./avalie.html" target="_blank"><p>Avalie-Nos</p></a>
+          </div>
+          
+          <div id="redesocial" class = "itemsrodape">
+            <a href=""><img id = "ig" src = "LOGOS/IGOFICIAL.svg" width="25px"> <img id = "whatsapp" src = "LOGOS/WPPOFICIAL.svg" width="25px"> </a>
+          </div>
+        </footer>
+      <script src = "./pedido.js"></script>
+      
+      <script src = "./main.js"></script>
+      
+      <script src = "apiwpp.js"></script>
+
+      <script src = "overlay.js"></script>
+      
+     <script src = "slideshow.js"></script>
+     
+
+        <script>
+        
+        function openSearch() {
+        document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function closeSearch() {
+        document.getElementById("myOverlay").style.display = "none";
+        }
+        </script>
+        <script>
+        
+          function openSearch1() {
+          document.getElementById("myOverlay1").style.display = "block";
+          }
+  
+          function closeSearch1() {
+          document.getElementById("myOverlay1").style.display = "none";
+          }
+          </script>
+           
+          <script>
+        
+            function openSearch2() {
+            document.getElementById("myOverlay2").style.display = "block";
+            }
+    
+            function closeSearch2() {
+            document.getElementById("myOverlay2").style.display = "none";
+            }
+            </script>
+
+<script>
+        
+  function openSearch3() {
+  document.getElementById("myOverlay3").style.display = "block";
+  }
+
+  function closeSearch3() {
+  document.getElementById("myOverlay3").style.display = "none";
+  }
+  </script>
+        
+   
+        </body>
+        </html>
+
+</html>

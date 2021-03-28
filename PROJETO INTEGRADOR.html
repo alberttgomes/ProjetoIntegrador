@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJETO INTEGRADOR</title>
+</head>
+<body>
+   
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#FFBC85;
+    margin: 0;
+    }
+
+
+    
+ul.barnav{
+    
+    position:absolute;
+    overflow: hidden;
+    background-color:#ff7e27;
+    border-radius: 10pt;
+    font-size: medium;
+    margin-top:80pt;
+    padding: 15pt 330pt;
+    margin-left: 13pt;
+    margin-right: 0pt;
+    box-shadow: 1px 1px 4px black;
+    max-width: 100%;
+    max-height: 100%; 
+    
+   }
+
+
+ul.barnav li{
+float:right;
+list-style: none;
+text-align: center;
+
+    }
+
+ul.barnav li a{
+    
+    color:#0e0702;
+    text-align:center;
+    text-decoration: none;
+    padding: 16px 16px;
+    }
+
+ul.barnav li a:hover:not(.active){
+    background-color:lightblue; 
+    opacity: 0,2;
+    border-radius: 10pt;
+    } 
+
+ul.barnav li:right {float:none;}
+
+
+#ftig a img{
+     
+      position: absolute;
+      left: 1240px;
+      max-height: 40px;
+      max-width: 40px;
+      top:20px;    
+    }
+
+
+#ftwpp a img{
+      
+      position: absolute;
+      left:1290px;
+      max-height:40px;
+      max-width:40px;
+      top:20px;
+    }
+
+#ftwpp a img:hover:not(.active){
+    background-color:rgb(67, 201, 67); 
+    opacity: 0,2;
+    border-radius: 10pt;
+    }
+
+#ftig a img:hover:not(.active){
+    background-color:rgb(240, 71, 240); 
+    opacity: 0,2;
+    border-radius: 10pt;
+
+}
+.galeria img{
+
+    width: 1000px;
+    max-height: 400px;   
+    margin-right: 0px;
+    margin-left: 200px;
+    margin-top:200px;   
+}
+figure.galeria img{
+width: 100%;
+height: 100%;
+
+}
+
+
+      
+ 
+
+.foto{
+    
+   display: flex;
+    position: absolute;
+    opacity: 0;
+    animation-name: animacao;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animacao{
+    50%{
+        opacity: 1;
+        transform: scale(1.1,1.1);
+       }
+    
+    30%{
+        opacity: 1;
+       }
+}
+.foto:nth-child(1){
+
+    animation-delay: 0s; 
+
+ }
+.foto:nth-child(2){
+     animation-delay: 10s;
+}
+.foto:nth-child(3){
+    animation-delay: 20s;
+}
+.foto:nth-child(4){
+    animation-delay: 30s;
+}    
+
+ #Logo img{     
+   
+        position:absolute; 
+        max-width: 200px;
+        max-height: 100px;
+        right:1150px;
+        top:10px;
+            
+}
+
+
+</style>
+
+
+<div id = "Logo"><img src="AMBIENTE - PI/LOGOS/logo1.png" alt ="Logo"></div>
+
+
+<div id = "ftig">
+<a id = "ig" href= "https://www.instagram.com/" target="_blanck"><img src= "AMBIENTE - PI/LOGOS/IGBLACK.svg" alt = "INSTAGRAM"></img></a>
+</div>
+
+<div id = "ftwpp">    
+<a id ="Wpp" href="https://api.whatsapp.com/send?phone=" onclick = "Wpp()" target="_blank"><img src= "AMBIENTE - PI/LOGOS/WPPBLACK.svg" alt = "WhatsApp"></img></a>
+</div>
+
+<ul class="barnav" id = "menu">
+    <li><a href= "file:///C:/Users/alber/OneDrive/%C3%81rea%20de%20Trabalho/SOBRE-N%C3%93S.html" id ="sobre">SOBRE</a></li>
+    <li><a href="https://www.google.com/maps/place/Universidade+Cat%C3%B3lica+De+Pernambuco/@-8.0548955,-34.8899509,17z/" target="_blank" id = "onde_estamos">ONDE ESTAMOS</a></li>
+    <li><a href="" id = "cardapio">CARDÁPIO</a></li>
+    <li><a class="active" href= "" class = "right">HOME</a></li>  
+</ul>
+
+<section  class = "galeria">
+    
+    <img  class= "foto" src= "UNICAP/Analise de Interface/icons/tapiocaSHOW1.jpg">
+    <img  class= "foto" src= "UNICAP/Analise de Interface/icons/tapiocaSHOW2.jpg">
+    <img  class= "foto" src= "UNICAP/Analise de Interface/icons/tapiocaSHOW3.jpg">
+    <img class= "foto" src = "UNICAP/Analise de Interface/icons/tapiocaSHOW4.jpg">
+
+</section>
+
+
+<script>
+
+function Wpp (){
+var telefone = "5581985563743"
+           document.getElementById("Wpp"). href = "https://api.whatsapp.com/send?phone="+telefone;  
+}
+       
+
+</script>
+  
+ 
+    
+                    
+    
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <style>
+   body{
+    background-color: #eaeaea;
+    align-items: center;
+    text-align: center;
+  }
+  h1{
+    background-color: #F26A21;
+    text-align: center;
+    color: #061716;
+  }
+  title{
+    background-color: #061716;
+  }
+  fieldset{
+    background-color: #E3EDEC;
+  }
+  input{
+    background-color: #E3EDEC;
+  }
+  ::placeholder{
+    background-color: #E3EDEC;
+  }
+  select{
+    background-color: #E3EDEC;
+  }
+  button{
+     background-color: #5DC9E3;
+     color:#061716;
+  }
+  fieldset{
+    align-items: center;
+    text-align: center;
+  }
+  textarea{
+    background-color: #E3EDEC;  
+  }
+  </style>
+ <meta charset="UTF-8">
+    
+ <title>Avalie-nos</title>
+ <h1>Avalie-nos</h1>
+</head>
+        
+<body>
+  <form class="form" method="POST" action="./Avaliação do serviço.html">
+    <br><br>
+      <label for="item1">Nome:</label><br>
+      <input type="text" id="item1" name="item1" placeholder="Digite seu nome aqui."><br><br>
+  
+     <legend for="Avalie nosso atendimento!"></legend>
+     <label for="atendimento">Atendimento:</label><br>
+     <select name="serviço" id="atendimento">
+      <option>Escolha uma opção:</option> 
+      <option value="Excelente">Excelente</option>
+      <option value="Satisteito(a)">Satisteito(a)</option>
+      <option value="Razoável">Razoável</option>
+      <option value="Insatisfeito(a)">Insatisfeito(a)</option>
+     </select><br><br>
+ 
+     <label for="ambiente"> Ambiente:</label><br>
+      <select name="ambiente" id="ambiente">
+       <option>Escolha uma opção:</option> 
+       <option value="Excelente">Excelente</option>
+       <option value="Satisteito(a)">Satisteito(a)</option>
+       <option value="Razoável">Razoável</option>
+       <option value="Insatisfeito(a)">Insatisfeito(a)</option>
+      </select><br><br>
+
+      <label for="comida"> Comida:</label><br>
+      <select name="comida" id="comida">
+       <option>Escolha uma opção:</option> 
+       <option value="Excelente">Excelente</option>
+       <option value="Satisteito(a)">Satisteito(a)</option>
+       <option value="Razoável">Razoável</option>
+       <option value="Insatisfeito(a)">Insatisfeito(a)</option>
+      </select><br><br>
+
+      <label for="bebida"> Bebida:</label><br>
+      <select name="babida" id="bebida">
+       <option>Escolha uma opção:</option> 
+       <option value="Excelente">Excelente</option>
+       <option value="Satisteito(a)">Satisteito(a)</option>
+       <option value="Razoável">Razoável</option>
+       <option value="Insatisfeito(a)">Insatisfeito(a)</option>
+      </select><br><br>
+      <label for="Espaço para observações"> Deseja acrescentar mais alguma observação?</label><br><br>
+      <textarea rows="10" cols="40" placeholder=" Escreva sua observação aqui." id="observacao"></textarea><br><br>
+
+    
+
+   <script>
+    
+    
+    function Enviar(){
+    var telefone = "5581981031611";    
+    var item1=document.getElementById("item1").value;
+    var atendimento=document.getElementById("atendimento").value;
+    var ambiente=document.getElementById("ambiente").value;
+    var comida=document.getElementById("comida").value;
+    var bebida=document.getElementById("bebida").value;
+    var observacao=document.getElementById("observacao").value;
+    var avaliação;
+    document.getElementById("Enviar"). href = "https://api.whatsapp.com/send?phone="+telefone;
+    
+    avaliação="Cleiton e Ceça, "+ item1+ " avaliou vocês da seguinte forma: "+"O atendimento considerou como: "+atendimento+", Ambiente:  "+ambiente+", Comida: "+comida+" e a Bebida: "+bebida+". "+" "+observacao+""
+ 
+   
+    }
+ 
+
+   </script>
+   
+   <button type="button" onclick="Enviar ()">Enviar</button>
+   <button type="reset" onclick="Limpar">Limpar</button>
+   <p id="test"></p>
+   <p id="pedido"><a id="linkZap" href=""> Confirme sua avaliação:</a></p>
+  
+  </form>
+
+</body>
+</html>
